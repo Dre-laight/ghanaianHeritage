@@ -4,14 +4,14 @@ const cards = [
   { title: 'Symbols', desc: 'Adinkra symbols and their meaning', icon: '🔺' },
   { title: 'Games', desc: 'Oware, Achi, Dame', icon: '⚫' },
   { title: 'Food', desc: 'Dishes, ingredients, regional flavor', icon: '🍲' },
-  { title: 'Music', desc: 'Rhythms, instruments, dance', icon: '🎶' },
+  { title: 'People', desc: 'Rhythms, instruments, dance', icon: '🎶' },
 ]
 
 function DiscoverGhana() {
   return (
     <section className="w-full bg-[#F7E7CE] px-6 md:px-16 py-20 md:py-28">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-kablammo text-3xl md:text-5xl text-orange-900 text-center">
+        <h2 className="font-kablammo text-4xl md:text-5xl text-orange-900 text-center font-bold">
           Discover Ghana
         </h2>
 
@@ -30,10 +30,10 @@ function DiscoverGhana() {
               className="group text-left border-none p-6 rounded-lg cursor-pointer bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] hover:scale-[1.03] transition-transform duration-300"
             >
               <span className="text-3xl">{card.icon}</span>
-              <h3 className="mt-4 font-kablammo text-xl">{card.title}</h3>
+              <h3 className="mt-4 font-kablammo text-2xl">{card.title}</h3>
               <p className="mt-1 text-sm text-[#F7E7CE]/80">{card.desc}</p>
               <span className="mt-4 inline-block text-xs uppercase tracking-wide font-bold border-b border-[#F7E7CE]/50 group-hover:border-[#F7E7CE] transition-colors">
-                Explore
+                {'Explore'}
               </span>
             </button>
           ))}

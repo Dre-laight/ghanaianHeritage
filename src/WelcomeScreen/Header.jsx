@@ -12,7 +12,7 @@ function Header() {
       {/* contrast wash, tinted to your palette instead of flat black */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#241C15]/60 via-[#241C15]/20 to-[#241C15]/70" />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-10">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-8">
         <div className='flex flex-col items-center justify-center'>
           <span
             className="stamp-word text-xs md:text-sm tracking-[0.3em] uppercase font-bold"
@@ -35,7 +35,7 @@ function Header() {
         </div>
 
         <button
-          className="stamp-word flex justify-center gap-3 items-center border-none p-2 w-40 rounded-lg cursor-pointer bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] uppercase font-bold hover:scale-105 transition-transform duration-300"
+          className="stamp-word flex justify-center gap-2 items-center border-none p-3 w-40 rounded-lg cursor-pointer bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] uppercase hover:scale-105 transition-transform duration-300"
           style={{ animationDelay: '0.65s' }}
         >
           Discover
