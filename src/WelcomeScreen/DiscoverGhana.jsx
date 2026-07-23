@@ -1,13 +1,20 @@
-const cards = [
-  { title: 'Culture', desc: 'Festivals, clothing, traditions', icon: '🥁' },
-  { title: 'History', desc: 'Ancient kingdoms, independence, key figures', icon: '📜' },
-  { title: 'Symbols', desc: 'Adinkra symbols and their meaning', icon: '🔺' },
-  { title: 'Games', desc: 'Oware, Achi, Dame', icon: '⚫' },
-  { title: 'Food', desc: 'Dishes, ingredients, regional flavor', icon: '🍲' },
-  { title: 'People', desc: 'Rhythms, instruments, dance', icon: '🎶' },
-]
+import { useNavigate } from "react-router-dom"
+
+
 
 function DiscoverGhana() {
+  const navigate = useNavigate()
+
+  const cards = [
+    { title: 'Culture', desc: 'Festivals, clothing, traditions', icon: '🥁', route: '/culture'  },
+    { title: 'History', desc: 'Ancient kingdoms, independence, key figures', icon: '📜', route: '/history'  },
+    { title: 'Symbols', desc: 'Adinkra symbols and their meaning', icon: '🔺', route: '/symbols'  },
+    { title: 'Dance', desc: 'Adowa, Apatampa, Boboboo', icon: '⚫', route: '/dance'  },
+    { title: 'Food', desc: 'Dishes, ingredients, regional flavor', icon: '🍲', route: '/food'  },
+    { title: 'People', desc: 'Rhythms, instruments, dance', icon: '🎶', route: '/people'  },
+  ]
+
+
   return (
     <section className="w-full bg-[#F7E7CE] px-6 md:px-16 py-20 md:py-28">
       <div className="max-w-5xl mx-auto">
@@ -32,7 +39,7 @@ function DiscoverGhana() {
               <span className="text-3xl">{card.icon}</span>
               <h3 className="mt-4 font-kablammo text-2xl">{card.title}</h3>
               <p className="mt-1 text-sm text-[#F7E7CE]/80">{card.desc}</p>
-              <span className="mt-4 inline-block text-xs uppercase tracking-wide font-bold border-b border-[#F7E7CE]/50 group-hover:border-[#F7E7CE] transition-colors">
+              <span className="mt-4 inline-block text-xs uppercase tracking-wide font-bold border-b border-[#F7E7CE]/50 group-hover:border-[#F7E7CE] transition-colors" onClick={() => navigate(card.route)}>
                 {'Explore'}
               </span>
             </button>
