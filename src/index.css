@@ -1,1 +1,42 @@
-@import 'tailwindcss'
+@font-face{
+    font-family: kablammo;
+    src: url("../src/assets/fonts/Kablammo-Regular-VariableFont_MORF.ttf")
+}
+
+@import 'tailwindcss';
+
+@theme{
+    --font-kablammo: kablammo, 'sans-serif';
+    --font-elite: elite, 'sans-serif';
+    --font-fingerpaint: fingerpaint, 'sans-serif';
+    --color-gold: #D4AF37;
+    --color-darkgold: #FFD700;
+    --color-wood: #4B2E2B;
+    --color-wood1: #6F4E37;
+    --color-dark: #1B1713;
+    --color-midGold: #E6C15A; 
+    --animate-next: nextArrow 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-previous: previousArrow 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-float: float 1.5s infinite ease-in-out;
+}
+
+/* index.css */
+html {
+  scrollbar-width: none;   
+  -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar {
+  display: none;             
+}
+
+@keyframes stamp-in {
+  0%   { opacity: 0; transform: scale(1.4) translateY(-10px); }
+  60%  { opacity: 1; transform: scale(0.96) translateY(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.stamp-word {
+  opacity: 0;
+  animation: stamp-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
