@@ -1,26 +1,31 @@
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import oware from '../assets/oware.jpg'
+import adinkra from '../assets/adinkra.webp'
+import kente from '../assets/kente.jpg'
+import homowo from '../assets/homowo.jpg'
+
 
 const heritageItems = [
   {
     title: 'Kente',
     desc: 'Woven strip-cloth, each pattern carrying its own meaning.',
-    image: '/assets/kente.jpg',
+    image: kente
   },
   {
     title: 'Adinkra',
     desc: 'Symbols stamped onto cloth, each one a proverb in shorthand.',
-    image: '/assets/adinkra.jpg',
+    image: adinkra
   },
   {
     title: 'Oware',
     desc: 'A board game of strategy and counting, played for generations.',
-    image: '/assets/oware.jpg',
+    image: oware
   },
   {
     title: 'Homowo',
     desc: 'A harvest festival celebrating triumph over hunger.',
-    image: '/assets/homowo.jpg',
+    image:homowo
   },
 ]
 

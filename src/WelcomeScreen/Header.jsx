@@ -2,6 +2,10 @@ import bg from '../assets/bg.png'
 import { Menu, ChevronsDown } from 'lucide-react'
 
 function Header() {
+  const scrollDown = () => {
+    document.getElementById('discover').scrollIntoView({behavior: 'smooth'})
+  }
+
   return (
     <header
       className="relative w-full min-h-screen bg-cover sm:bg-center bg-no-repeat"
@@ -36,7 +40,7 @@ function Header() {
 
         <button
           className="stamp-word flex justify-center gap-2 items-center border-none p-3 w-40 rounded-lg cursor-pointer bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] uppercase hover:scale-105 transition-transform duration-300"
-          style={{ animationDelay: '0.65s' }}
+          style={{ animationDelay: '0.65s' }} onClick={scrollDown}
         >
           Discover
           <ChevronsDown className='animate-bounce' />

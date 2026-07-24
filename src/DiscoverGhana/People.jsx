@@ -1,11 +1,16 @@
 import { useState } from 'react'
+import nkrumah from '../assets/nkrumah.jpg'
+import yaa from '../assets/yaa.jpg'
+import amu from '../assets/amu.jpg'
+import efua from '../assets/efua.webp'
+import annan from '../assets/annan.jpg'
 
 const figures = [
   {
     name: 'Kwame Nkrumah',
     era: '1909–1972',
     title: 'First President of Ghana',
-    portrait: '/assets/figures/nkrumah.jpg',
+    portrait: nkrumah,
     quote: '"Independence is not given, it is taken."',
     bio:
       'Led Ghana to independence in 1957, becoming the first sub-Saharan African country to break from colonial rule. A leading voice for Pan-Africanism, Nkrumah pushed for African unity throughout his presidency.',
@@ -15,7 +20,7 @@ const figures = [
     name: 'Yaa Asantewaa',
     era: 'c. 1840–1921',
     title: 'Queen Mother of Ejisu',
-    portrait: '/assets/figures/yaa-asantewaa.jpg',
+    portrait: yaa,
     quote: '"If you the men of Ashanti will not go forward, then we will."',
     bio:
       'Led the Ashanti Empire\'s War of the Golden Stool against British colonial forces in 1900, one of the last major uprisings against colonial rule in the region.',
@@ -25,7 +30,7 @@ const figures = [
     name: 'Kofi Annan',
     era: '1938–2018',
     title: 'Former UN Secretary-General',
-    portrait: '/assets/figures/kofi-annan.jpg',
+    portrait: annan,
     quote: '"Knowledge is power. Information is liberating."',
     bio:
       'The first Black African to serve as UN Secretary-General, Annan led the organization through major humanitarian and peacekeeping reforms and was awarded the Nobel Peace Prize in 2001.',
@@ -35,7 +40,7 @@ const figures = [
     name: 'Efua Sutherland',
     era: '1924–1996',
     title: 'Playwright & Cultural Advocate',
-    portrait: '/assets/figures/efua-sutherland.jpg',
+    portrait: efua,
     quote: '"The theatre is a place where a community comes to know itself."',
     bio:
       'A pioneering playwright and researcher who helped shape modern Ghanaian theatre, founding institutions that supported the arts and children\'s literacy.',
@@ -45,7 +50,7 @@ const figures = [
     name: 'Ephraim Amu',
     era: '1899–1995',
     title: 'Composer & Musicologist',
-    portrait: '/assets/figures/ephraim-amu.jpg',
+    portrait: amu,
     quote: '"Our own music, sung in our own tongue, carries our own soul."',
     bio:
       'A composer who championed African musical traditions at a time when Western styles dominated formal music education, blending indigenous rhythm and language into his compositions.',
@@ -73,7 +78,7 @@ function FiguresPage() {
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* name list */}
-          <ul className="md:w-1/3 flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
+          <ul className="md:w-1/3 flex md:flex-col gap-2 overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0">
             {figures.map((figure) => {
               const isActive = figure.name === selectedName
               return (

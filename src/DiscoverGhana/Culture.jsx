@@ -1,10 +1,10 @@
 import { MapPin, Users, Languages, PartyPopper, ArrowRight } from 'lucide-react'
 import cultureHero from '../assets/culture.png'
 import galleryOne from '../assets/games.png'
-import galleryTwo from '../assets/adinkra.png'
+import galleryTwo from '../assets/gobe.jpg'
 import galleryThree from '../assets/food.png'
 import galleryFour from '../assets/adinkra.png'
-import storyImage from '../assets/games.png'
+import storyImage from '../assets/diversity.png'
 
 const quickFacts = [
   { icon: MapPin, label: 'Origin', value: 'West Africa, Gulf of Guinea coast' },

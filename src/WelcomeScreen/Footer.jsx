@@ -11,7 +11,9 @@ function Footer() {
       </p>
 
       <button className="mt-8 px-8 py-3 rounded-lg bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] uppercase font-bold hover:scale-105 transition-transform duration-300">
-        Start your journey
+        <a href="https://agokansie.vercel.app">
+          Start your journey
+        </a>
       </button>
 
       <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-[#A47551]/20 pt-8 max-w-5xl mx-auto">

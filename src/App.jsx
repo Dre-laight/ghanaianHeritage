@@ -5,7 +5,7 @@ import HistoryTimeline from './DiscoverGhana/History'
 import FoodPage from './DiscoverGhana/Food'
 import SymbolsPage from './DiscoverGhana/Symbols'
 import FiguresPage from './DiscoverGhana/People'
-import DancePage from './DiscoverGhana/Dance'
+import HeritageSitesPage from './DiscoverGhana/places'
 
 function App() {
   const location = useLocation()
@@ -19,12 +19,12 @@ function App() {
         <Route path="/food" element={<FoodPage/>} />
         <Route path="/symbols" element={<SymbolsPage/>} />
         <Route path="/people" element={<FiguresPage/>} />
-        <Route path="/dance" element={<DancePage/>} />
+        <Route path="/heritagesite" element={<HeritageSitesPage/>} />
       </Routes>
     
   
 
-  )
+)
 }
 
 export default App

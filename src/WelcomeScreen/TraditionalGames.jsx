@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import achiBoard from '../assets/achiimage.webp'
+import owareBoard from '../assets/owareImage.jpg'
+import dameBoard from '../assets/dameBoard.jpg'
 
 const games = [
   {
@@ -6,18 +9,21 @@ const games = [
     tagline: 'A game of counting, capturing, and strategy.',
     detail:
       'Played across two rows of pits, players sow seeds and try to capture their opponent\'s. One of the oldest board games still played today.',
+    image: owareBoard,
   },
   {
     name: 'Achi',
     tagline: 'Three in a row wins it.',
     detail:
       'A simple but sharp game of placement and movement on a small grid — easy to learn, hard to master.',
+    image: achiBoard,
   },
   {
     name: 'Dame',
     tagline: 'Ghana\'s take on draughts.',
     detail:
       'A tactical board game of jumps and captures, played on a checkered board passed down through generations.',
+    image: dameBoard,
   },
 ]
 
@@ -40,7 +46,7 @@ function TraditionalGames() {
         </div>
 
         <p className="text-center text-[#6B4226]/80 mb-14 max-w-lg mx-auto">
-          Learn the rules. Play with AI. Discover the history.
+          Learn the rules. Play with Agokansie. Discover the history.
         </p>
 
         {/* game tabs */}
@@ -73,10 +79,14 @@ function TraditionalGames() {
 
             <div className="mt-6 flex gap-3 flex-wrap items-center justify-center">
               <button className="px-5 py-2 rounded-lg bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] font-bold uppercase text-sm hover:scale-105 transition-transform duration-300">
-                Learn the rules
+                <a href="https://agokansie.vercel.app/selectionScreen">
+                  Learn the rules
+                </a>
               </button>
               <button className="px-5 py-2 rounded-lg bg-gradient-to-br from-[#A47551] to-[#6B4226] text-[#F7E7CE] font-bold uppercase text-sm hover:scale-105 transition-transform duration-300">
-                Play with Agokansie
+                <a href="https://agokansie.vercel.app/selectionScreen">
+                  Play with Agokansie
+                </a>
               </button>
 
             </div>
@@ -84,7 +94,7 @@ function TraditionalGames() {
 
           {/* board illustration placeholder */}
           <div className="w-full md:w-1/2 aspect-video rounded-lg bg-[#241C15]/10 flex items-center justify-center text-[#6B4226]/50 text-sm">
-            {activeGame.name} board illustration
+          <img src={activeGame.image} className='h-80'/>
           </div>
         </div>
       </div>

@@ -1,8 +1,14 @@
+import jollof from '../assets/jollof.webp'
+import gobe from '../assets/gobe.jpg'
+import banku from '../assets/banku.jpeg'
+import kelewele from '../assets/kelewele.jpg'
+import waakye from '../assets/waakye.jpg'
+import fufu from '../assets/fufu.jpg'
+
 const dishes = [
   {
     name: 'Jollof',
-    emoji: '🍲',
-    image: '/assets/food-jollof.jpg',
+    image: jollof,
     ingredients: ['Rice', 'Tomatoes', 'Onions', 'Scotch bonnet pepper', 'Spices', 'Chicken or beef'],
     history:
       'A one-pot rice dish believed to have originated with the Wolof people of Senegal and Gambia, later adopted and adapted across West Africa. Ghana\'s version is known for its deep smoky flavor from charred tomato base.',
@@ -10,8 +16,7 @@ const dishes = [
   },
   {
     name: 'Waakye',
-    emoji: '🍛',
-    image: '/assets/food-waakye.jpg',
+    image: waakye,
     ingredients: ['Rice', 'Black-eyed beans', 'Waakye leaves (sorghum stalks)', 'Spices'],
     history:
       'Cooked together with dried sorghum leaves that give the dish its distinctive reddish-brown color, waakye is a breakfast and lunch staple sold widely across Accra\'s streets.',
@@ -19,8 +24,7 @@ const dishes = [
   },
   {
     name: 'Banku & Tilapia',
-    emoji: '🐟',
-    image: '/assets/food-banku.jpg',
+    image: banku,
     ingredients: ['Fermented corn dough', 'Cassava dough', 'Grilled tilapia', 'Pepper sauce'],
     history:
       'Banku is fermented and cooked to a smooth, tangy consistency, traditionally eaten with the hands alongside grilled fish and a fiery pepper sauce — a coastal favorite.',
@@ -28,13 +32,27 @@ const dishes = [
   },
   {
     name: 'Kelewele',
-    emoji: '🍌',
-    image: '/assets/food-kelewele.jpg',
+    image: kelewele,
     ingredients: ['Ripe plantain', 'Ginger', 'Pepper', 'Cloves', 'Peanuts (optional)'],
     history:
       'Spiced fried plantain cubes, popular as a street food snack, often sold alongside roasted peanuts in the evenings across Ghanaian cities.',
     fact: 'The signature flavor comes from a ginger-and-pepper marinade the plantain sits in before frying.',
-  },
+  },{
+  name: 'Gobe',
+  image: gobe,
+  ingredients: ['Black-eyed beans', 'Ripe plantain', 'Palm oil', 'Onions', 'Pepper', 'Spices'],
+  history:
+    'A simple, filling combination of stewed beans and fried or boiled plantain, popular as a cheap and satisfying everyday meal sold widely by street vendors and in homes across Ghana.',
+  fact: 'Gobe is often eaten alongside "gari" (grated, dried cassava) for extra texture and bulk.',
+},
+{
+  name: 'Fufu',
+  image: fufu,
+  ingredients: ['Cassava', 'Unripe plantain (or cocoyam)', 'Soup or light soup', 'Meat or fish'],
+  history:
+    'A staple dish across the Ashanti region and much of Ghana, made by boiling and pounding cassava and plantain into a smooth, stretchy dough, traditionally eaten by hand and dipped into a hot soup rather than chewed.',
+  fact: 'Fufu is swallowed rather than chewed — small pieces are pinched off and dipped straight into soup.',
+},
 ]
 
 function DishCard({ dish }) {
@@ -43,12 +61,11 @@ function DishCard({ dish }) {
       <img
         src={dish.image}
         alt={dish.name}
-        className="w-full h-48 object-cover"
+        className="w-full h-90 md:h-60 object-cover"
       />
 
       <div className="p-6">
-        <h3 className="font-kablammo text-2xl text-orange-900 flex items-center gap-2">
-          <span>{dish.emoji}</span>
+        <h3 className="font-kablammo text-3xl font-semibold text-orange-900 flex items-center gap-2">
           {dish.name}
         </h3>
 
