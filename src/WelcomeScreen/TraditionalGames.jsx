@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import achiBoard from '../assets/achiimage.webp'
 import owareBoard from '../assets/owareImage.jpg'
-import dameBoard from '../assets/dameBoard.jpg'
+import dameBoard from '../assets/dameboard.jpg'
 
 const games = [
   {
